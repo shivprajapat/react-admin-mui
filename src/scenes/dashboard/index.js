@@ -1,21 +1,21 @@
-import { Box, Button, useTheme } from "@mui/material";
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import { tokens } from "../../theme";
-import { Header, StatBox } from "../../components";
+import { Header, StatBox,LineChart } from "../../components";
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box>
+    <Box component="div">
       <Box display="flex" justifyContent="space-between" alignItems="center" component='div'>
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-        <Box>
+        <Box component="div">
           <Button
             sx={{
               backgroundColor: colors.greenAccent[700],
@@ -51,6 +51,22 @@ const Dashboard = () => {
         <Box gridColumn="span 3" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center" component='div'>
           <StatBox title="1,325,134" subtitle="Traffic Received" progress="0.80" increase="+43%" icon={<TrafficIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />}
           />
+        </Box>
+        <Box gridColumn="span 8" gridRow="span 2" backgroundColor={colors.primary[400]} component="div">
+          <Box mt="25px" p="0 30px" display="flex " justifyContent="space-between" alignItems="center" component="div">
+            <Box component="div">
+              <Typography variant="h5" fontWeight="600" color={colors.grey[100]}>Revenue Generated</Typography>
+              <Typography variant="h3" fontWeight="bold" color={colors.greenAccent[500]}>$59,342.32
+              </Typography>
+            </Box>
+            <Box component="div">
+              <IconButton>
+                <DownloadOutlinedIcon sx={{ fontSize: "26px", color: colors.greenAccent[500] }} /></IconButton>
+            </Box>
+          </Box>
+          <Box height="250px" m="-20px 0 0 0">
+              <LineChart isDashboard={true} />
+            </Box>
         </Box>
       </Box>
     </Box>
