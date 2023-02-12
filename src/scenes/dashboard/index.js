@@ -5,7 +5,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import { tokens } from "../../theme";
-import { Header, StatBox, LineChart, ProgressCircle } from "../../components";
+import { Header, StatBox, LineChart, ProgressCircle, GeographyChart, BarChart } from "../../components";
 import { mockTransactions } from "../../data/mockData";
 
 const Dashboard = () => {
@@ -110,14 +110,15 @@ const Dashboard = () => {
         <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]}>
           <Typography variant="h5" fontWeight="600" sx={{ padding: "30px 30px 0 30px" }}>Sales Quantity</Typography>
           <Box height="250px" >
-            BarChart </Box>
+            <BarChart isDashboard={true} />
+          </Box>
         </Box>
         <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]} padding="30px">
           <Typography variant="h5" fontWeight="600" sx={{ marginBottom: "15px" }}>
             Geography Based Traffic
           </Typography>
           <Box height="200px">
-            GeographyChart
+            <GeographyChart isDashboard={true} />
           </Box>
         </Box>
       </Box>
