@@ -5,14 +5,19 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import { tokens } from "../../theme";
-import { Header, StatBox,LineChart } from "../../components";
+import { Header, StatBox, LineChart, ProgressCircle } from "../../components";
+import { mockTransactions } from "../../data/mockData";
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box component="div">
+    <Box component="div" sx={{
+      "& .MuiBox-root::-webkit-scrollbar": {
+        width: 0
+      }
+    }}>
       <Box display="flex" justifyContent="space-between" alignItems="center" component='div'>
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
         <Box component="div">
@@ -65,8 +70,55 @@ const Dashboard = () => {
             </Box>
           </Box>
           <Box height="250px" m="-20px 0 0 0">
-              <LineChart isDashboard={true} />
-            </Box>
+            <LineChart isDashboard={true} />
+          </Box>
+        </Box>
+        <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]} overflow="auto">
+          <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom={`4px solid ${colors.primary[500]}`} colors={colors.grey[100]} p="15px" component="ul">
+            <Typography color={colors.grey[100]} variant="h5" fontWeight="600">Recent Transactions</Typography>
+          </Box>
+          {
+            mockTransactions?.map((item, i) => {
+              const { txId, user, date, cost } = item;
+              return (
+                <Box key={`${txId}-${i}`} display="flex" justifyContent="space-between" alignItems="center" borderBottom={`4px solid ${colors.primary[500]}`} p="15px" component="li">
+                  <Box>
+                    <Typography color={colors.greenAccent[500]} variant="h5" fontWeight="600">{txId}</Typography>
+                    <Typography color={colors.grey[100]}>{user}</Typography>
+                  </Box>
+                  <Box color={colors.grey[100]}>{date}</Box>
+                  <Box backgroundColor={colors.greenAccent[500]} p="5px 10px" borderRadius="4px">${cost}
+                  </Box>
+                </Box>
+              )
+            })
+          }
+        </Box>
+        <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]} p="30px" component="div">
+          <Typography variant="h5" fontWeight="600">Campaign</Typography>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            mt="25px"
+          >
+            <ProgressCircle size="125" />
+            <Typography variant="h5" color={colors.greenAccent[500]} sx={{ mt: "15px" }}> $48,352 revenue generated</Typography>
+            <Typography>Includes extra misc expenditures and costs</Typography>
+          </Box>
+        </Box>
+        <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]}>
+          <Typography variant="h5" fontWeight="600" sx={{ padding: "30px 30px 0 30px" }}>Sales Quantity</Typography>
+          <Box height="250px" >
+            BarChart </Box>
+        </Box>
+        <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]} padding="30px">
+          <Typography variant="h5" fontWeight="600" sx={{ marginBottom: "15px" }}>
+            Geography Based Traffic
+          </Typography>
+          <Box height="200px">
+            GeographyChart
+          </Box>
         </Box>
       </Box>
     </Box>
