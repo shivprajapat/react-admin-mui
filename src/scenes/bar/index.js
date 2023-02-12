@@ -1,11 +1,11 @@
-import { Typography } from '@mui/material'
-import { Box } from '@mui/system'
 import React from 'react'
+import { Box } from '@mui/system'
+import { Header } from "../../components";
 
 const Bar = () => {
   return (
     <Box>
-        <Typography variant='h1'>Bar</Typography>
+        <Header title="Bar Chart" subtitle="Simple Bar Chart" />
     </Box>
   )
 }

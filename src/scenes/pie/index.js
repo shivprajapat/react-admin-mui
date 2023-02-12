@@ -1,11 +1,11 @@
-import { Typography } from '@mui/material'
-import { Box } from '@mui/system'
 import React from 'react'
+import { Box } from '@mui/system'
+import { Header } from "../../components";
 
 const Pie = () => {
   return (
     <Box>
-        <Typography variant='h1'>Pie</Typography>
+      <Header title="Pie Chart" subtitle="Simple Pie Chart" />
     </Box>
   )
 }

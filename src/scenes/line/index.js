@@ -1,11 +1,11 @@
-import { Typography } from '@mui/material'
-import { Box } from '@mui/system'
 import React from 'react'
+import { Box } from '@mui/system'
+import { Header } from "../../components";
 
 const Line = () => {
   return (
     <Box>
-        <Typography variant='h1'>Line</Typography>
+      <Header title="Line Chart" subtitle="Simple Line Chart" />
     </Box>
   )
 }
