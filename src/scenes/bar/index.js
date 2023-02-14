@@ -1,12 +1,15 @@
 import React from 'react'
 import { Box } from '@mui/system'
-import { Header } from "../../components";
+import { BarChart, Header } from "../../components";
 
 const Bar = () => {
   return (
     <Box>
         <Header title="Bar Chart" subtitle="Simple Bar Chart" />
-    </Box>
+        <Box height="75vh">
+        <BarChart />
+      </Box>
+          </Box>
   )
 }
 
