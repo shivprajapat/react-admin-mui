@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -31,6 +31,10 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 }
 const SidebarLayout = () => {
   const theme = useTheme();
+  const isNonMobile = useMediaQuery("(min-width:600px)");
+  // sx={{
+  //   "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
+  // }}
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
@@ -58,7 +62,7 @@ const SidebarLayout = () => {
         },
       }}
     >
-      <ProSidebar collapsed={isCollapsed}>
+      <ProSidebar collapsed={isNonMobile ? isCollapsed : !isCollapsed}>
         <Menu iconShape="square">
           {/* Logo Part */}
           <MenuItem onClick={() => setIsCollapsed(!isCollapsed)} icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
@@ -75,7 +79,7 @@ const SidebarLayout = () => {
 
           {/* Profile Part */}
           {
-            !isCollapsed && (
+            isNonMobile ? !isCollapsed && (
               <Box mb="25px" component='div'>
                 <Box display="flex" justifyContent="center" alignItems="center" component='div'>
                   <img
@@ -100,7 +104,7 @@ const SidebarLayout = () => {
                   </Typography>
                 </Box>
               </Box>
-            )
+            ) : null
           }
           <Box paddingLeft={isCollapsed ? undefined : "10% !important"} component='ul'>
             <Item
