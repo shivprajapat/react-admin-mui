@@ -1,5 +1,75 @@
 import { tokens } from "../theme";
-
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
+export const sideConfig = [
+  {
+    title: "Dashboard",
+    path: "/",
+    icon: <HomeOutlinedIcon />,
+    name: ['Data']
+  },
+  {
+    title: "Manage Team",
+    path: "/team",
+    icon: <PeopleOutlinedIcon />,
+  },
+  {
+    title: "Contacts Informatio",
+    path: "/contacts",
+    icon: <ContactsOutlinedIcon />,
+  },
+  {
+    title: "Invoices Balances",
+    path: "/invoices",
+    icon: <ReceiptOutlinedIcon />,
+    name: ['Pages']
+  },
+  {
+    title: "Profile Form",
+    path: "/form",
+    icon: <PersonOutlinedIcon />,
+  },
+  {
+    title: "Calendar",
+    path: "/calendar",
+    icon: <CalendarTodayOutlinedIcon />,
+  },
+  {
+    title: "FAQ Page",
+    path: "/faq",
+    icon: <HelpOutlineOutlinedIcon />,
+    name: ['Charts']
+  },
+  {
+    title: "Bar Chart",
+    path: "/bar",
+    icon: <BarChartOutlinedIcon />,
+  },
+  {
+    title: "Pie Chart",
+    path: "/pie",
+    icon: <PieChartOutlineOutlinedIcon />,
+  },
+  {
+    title: "Line Chart",
+    path: "/line",
+    icon: <TimelineOutlinedIcon />,
+  },
+  {
+    title: "Geography Chart",
+    path: "/geography",
+    icon: <MapOutlinedIcon />,
+  },
+]
 export const mockDataTeam = [
   {
     id: 1,
