@@ -10,8 +10,10 @@
 - npm i react-pro-sidebar
 - npm i @fullcalendar/list
 - npm i @mui/icons-material
+- npm i @fullcalendar/react
 - npm i @fullcalendar/daygrid
 - npm i @fullcalendar/timegrid
+- npm i @fullcalendar/interaction
 - npm i @mui/material @emotion/react @emotion/styled
 
 ## IDE used
