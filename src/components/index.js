@@ -1,7 +1,11 @@
-export { default as Header } from "./header"
-export { default as StatBox } from "./stat-box"
-export { default as PieChart } from "./pie-chart"
-export { default as BarChart } from "./bar-chart"
-export { default as LineChart } from "./line-chart"
-export { default as ProgressCircle } from "./ProgressCircle"
-export { default as GeographyChart } from "./geography-chart"
+import Header from "./header"
+import StatBox from "./stat-box"
+import PieChart from "./pie-chart"
+import BarChart from "./bar-chart"
+import LineChart from "./line-chart"
+import ProgressCircle from "./ProgressCircle"
+import GeographyChart from "./geography-chart"
+
+export {
+    Header, StatBox, PieChart, BarChart, LineChart, ProgressCircle, GeographyChart
+}
