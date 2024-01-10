@@ -5,7 +5,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import { tokens } from "../../theme";
-import { Header, StatBox, LineChart, ProgressCircle, GeographyChart, BarChart } from "../../components";
+import { Header, StatBox, LineChart, ProgressCircle, GeographyChart, BarChart } from "components";
 import { mockTransactions } from "../../data/mockData";
 
 const Dashboard = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/system'
-import { Header, LineChart } from "../../components";
+import { Header, LineChart } from "components";
 
 const Line = () => {
   return (

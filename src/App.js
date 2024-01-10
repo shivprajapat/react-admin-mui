@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme";
-import { Dashboard, Sidebar, Topbar, Team, Invoices, Contacts, Bar, Form, Line, Pie, FAQ, Calendar, Geography } from "./scenes";
+import { Dashboard, Sidebar, TopBar, Team, Invoices, Contacts, Bar, Form, Line, Pie, FAQ, Calendar, Geography } from "./scenes";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -15,7 +15,7 @@ const App = () => {
         <div className="app">
           <Sidebar />
           <main className="content">
-            <Topbar />
+            <TopBar />
             <Box component='section'  m="20px">
             <Routes>
               <Route path="/" element={<Dashboard />} />

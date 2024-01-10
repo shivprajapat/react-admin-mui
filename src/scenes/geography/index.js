@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/system'
-import { GeographyChart, Header } from "../../components";
+import { GeographyChart, Header } from "components";
 import { tokens } from '../../theme';
 import { useTheme } from '@emotion/react';
 

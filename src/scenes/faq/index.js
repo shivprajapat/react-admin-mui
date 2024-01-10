@@ -6,7 +6,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Accordion from "@mui/material/Accordion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { tokens } from "../../theme";
-import { Header } from "../../components";
+import { Header } from "components";
 
 const FAQ = () => {
   const theme = useTheme();

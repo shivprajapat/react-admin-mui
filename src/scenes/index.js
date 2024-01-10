@@ -1,13 +1,28 @@
-export { default as FAQ } from "./faq"
-export { default as Pie } from "./pie"
-export { default as Bar } from "./bar"
-export { default as Form } from "./form"
-export { default as Team } from "./team"
-export { default as Line } from "./line"
-export { default as Invoices } from "./invoices"
-export { default as Contacts } from "./contacts"
-export { default as Calendar } from "./calendar"
-export { default as Geography } from "./geography"
-export { default as Dashboard } from "./dashboard"
-export { default as Topbar } from "./global/Topbar"
-export { default as Sidebar } from "./global/Sidebar"
+import FAQ from "./faq";
+import Pie from "./pie";
+import Bar from "./bar";
+import Form from "./form";
+import Team from "./team";
+import Line from "./line";
+import Invoices from "./invoices";
+import Contacts from "./contacts";
+import Calendar from "./calendar";
+import Geography from "./geography";
+import Dashboard from "./dashboard";
+import TopBar from "./global/Topbar";
+import Sidebar from "./global/Sidebar";
+export {
+  FAQ,
+  Pie,
+  Bar,
+  Form,
+  Team,
+  Line,
+  Invoices,
+  Contacts,
+  Calendar,
+  Geography,
+  Dashboard,
+  TopBar,
+  Sidebar,
+};

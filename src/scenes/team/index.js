@@ -4,9 +4,9 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import { DataGrid } from "@mui/x-data-grid";
 
-import { tokens } from "../../theme";
-import { Header } from "../../components";
-import { mockDataTeam } from "../../data/mockData";
+import { Header } from "components";
+import { tokens } from "theme";
+import { mockDataTeam } from "data/mockData";
 
 const Team = () => {
   const theme = useTheme();
